@@ -1,10 +1,25 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
+import '../styles/AstronautRecordStyle.scss'
+import AstronautProfileImage from './AstronautProfileImage';
+import AstronautRecordInfo from './AstronautRecordInfo';
+
 
 const AstronautRecord = (props) => {
-        return[
-        <div> {props.firstName} </div>,
-            <div> {props.lastName} </div>
-        ]
+    return [
+        <div className="Astronaut-Record">
+            <AstronautProfileImage
+             gender = {props.gender}
+            ></AstronautProfileImage>
+
+            <AstronautRecordInfo
+            {...props}
+            ></AstronautRecordInfo>
+
+            
+        </div>,
+        <hr className= "Astronaut-Record__Hr" ></hr>
+
+    ]
 }
 
 export default AstronautRecord;

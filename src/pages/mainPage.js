@@ -4,7 +4,8 @@ import AstronautsList from '../components/AstronautsList'
 class MainPage extends Component{
     render(){
         return[
-                <h1>HELLO</h1>,
+                <h1>ASTRONAUT MANAGER</h1>,
+                <button>ThemeSwitch</button>,
                 <AstronautsList></AstronautsList>
         ]
     }

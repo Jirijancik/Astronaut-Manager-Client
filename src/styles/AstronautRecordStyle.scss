@@ -1,0 +1,23 @@
+.Astronaut-Record{
+display: grid;
+grid-template-columns: 2fr 10fr;
+margin: 10px;
+
+    &__Name{
+
+    font-weight: 600;
+    font-size: 1.1em;    
+    }
+
+    &__Date-Of-Birth{
+        color: rgb(79, 92, 117);
+    }
+
+    &__Hr{
+        border: 0;
+        width: 100%;               
+        background-color:rgba(0, 0, 0, 0.411);
+        height: 1px;
+    }
+
+}

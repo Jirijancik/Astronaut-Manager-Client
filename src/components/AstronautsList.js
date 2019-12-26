@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import AstronautRecord from './AstronautRecord';
+import '../styles/AstronautListStyle.scss'
 
 class AstronautsList extends Component{
 
@@ -21,6 +22,10 @@ class AstronautsList extends Component{
 
             firstName = {item.firstName}
             lastName = {item.lastName}
+            dateOfBirth = {item.dateOfBirth}
+            superpower = {item.superpower}
+            gender = {item.gender}
+
             >
             </AstronautRecord>
         )
@@ -35,8 +40,8 @@ class AstronautsList extends Component{
 
 
         return[
-            <h2>Astronauts List</h2>,
-        <div>{this.state.loading ? <div>loading...</div> : <div>{this.state.data}</div>}</div>
+            
+            <div className = "Astronaut-List" >{this.state.loading ? <div>loading...</div> : <div>{this.state.data}</div>}</div>
         ]
     }
 }
