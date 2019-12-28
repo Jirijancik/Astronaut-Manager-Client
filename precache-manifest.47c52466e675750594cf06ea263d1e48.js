@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "6827afc0d6dfb8986c1af32cde525426",
+    "revision": "0e969c92f26ea80872d2c91693dc59b5",
     "url": "/Astronaut-Manager-Client/index.html"
   },
   {
-    "revision": "b558aba44b7c941c355f",
-    "url": "/Astronaut-Manager-Client/static/css/main.d044a18f.chunk.css"
+    "revision": "3a0fbfda4b485d21a410",
+    "url": "/Astronaut-Manager-Client/static/css/main.fd7e488d.chunk.css"
   },
   {
     "revision": "293d396fe1ef9e0609e2",
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Astronaut-Manager-Client/static/js/2.93ee6dd5.chunk.js.LICENSE"
   },
   {
-    "revision": "b558aba44b7c941c355f",
-    "url": "/Astronaut-Manager-Client/static/js/main.4e74746e.chunk.js"
+    "revision": "3a0fbfda4b485d21a410",
+    "url": "/Astronaut-Manager-Client/static/js/main.cf517096.chunk.js"
   },
   {
     "revision": "3c1e30db1f78a47da9dc",
