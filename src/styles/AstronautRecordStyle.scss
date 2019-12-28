@@ -1,9 +1,12 @@
 .Astronaut-Record{
 display: grid;
-grid-template-columns: 2fr 10fr;
+grid-template-columns: 1fr 7fr;
 margin: 10px;
 background-color: rgba(255, 255, 255, 0.8);
 color: black;
+border-radius: 5px;
+padding: 5px 15px;
+padding-top: 10px;
 
     &__Name{
 

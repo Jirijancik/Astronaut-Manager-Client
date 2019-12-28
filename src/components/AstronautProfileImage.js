@@ -6,7 +6,7 @@ import '../styles/AstronautProfileImageStyle.scss'
 
 const AstronautProfileImage = (props) => {
     return [
-        <div >
+        <div className="Astronaut-Profile-Image__Wrapper">
             <img className="Astronaut-Profile-Image" src={
                 props.gender === "male" ? maleAstronautPng : femaleAstronautPng
                 } alt="Profile"></img>

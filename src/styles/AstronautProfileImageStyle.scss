@@ -1,3 +1,9 @@
 .Astronaut-Profile-Image{
     width: 150px;
+
+    &__Wrapper{
+        justify-content: center;
+        display: grid;
+    }
 }
+
