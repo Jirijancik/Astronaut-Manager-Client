@@ -1,19 +1,27 @@
 import React, {Component} from 'react';
 import AstronautRecord from './AstronautRecord';
 import '../styles/AstronautListStyle.scss'
+import LoadingLayer from './LoadingLayer';
 
 class AstronautsList extends Component{
-
-    state = {
-        loading:true,
-        data:[]
+    constructor(props) {
+        super(props);
+        
+        this.enableContent = this.enableContent.bind(this);
+    
+        this.state = {
+            loading:true,
+            timerFinished:false,
+            data:[]
+        }
+        
     }
+
 
     async componentDidMount(){
         const url = "https://europe-west1-astronaut-manager.cloudfunctions.net/getAstronauts";
         const response = await fetch(url).catch((err) => console.log(err));
         const data = await response.json();
-        console.log(data);
 
 
         const list = data.map(item => 
@@ -25,23 +33,39 @@ class AstronautsList extends Component{
             dateOfBirth = {item.dateOfBirth}
             superpower = {item.superpower}
             gender = {item.gender}
+            key = {item.id}
 
             >
             </AstronautRecord>
         )
-
-        this.setState({loading:false, data:list})
+        setTimeout(this.enableContent, 2200);
+        this.setState({loading:false, data:list});
     }
 
+    componentWillUnmount() {
+        clearTimeout(this.timerFinished);
+    }
 
+    enableContent() {
+        this.setState({timerFinished: true});
+    }
 
     render(){
-
-
-
         return[
             
-            <div className = "Astronaut-List" >{this.state.loading ? <div>loading...</div> : <div>{this.state.data}</div>}</div>
+            <div className = "Astronaut-List" >{
+
+            !this.state.loading && !this.state.timerFinished ?
+
+                <LoadingLayer></LoadingLayer> : 
+                
+                <React.Fragment>
+                {
+                     this.state.data
+                }
+                <button>ADD A NEW RECRUIT</button>
+                </React.Fragment>
+            }</div>
         ]
     }
 }
