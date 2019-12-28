@@ -1,45 +1,46 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import AstronautRecord from './AstronautRecord';
 import '../styles/AstronautListStyle.scss'
 import LoadingLayer from './LoadingLayer';
+import AddAstronautForm from './AddAstronautForm';
 
-class AstronautsList extends Component{
+class AstronautsList extends Component {
     constructor(props) {
         super(props);
-        
+
         this.enableContent = this.enableContent.bind(this);
-    
+
         this.state = {
-            loading:true,
-            timerFinished:false,
-            data:[]
+            loading: true,
+            timerFinished: false,
+            data: []
         }
-        
+
     }
 
 
-    async componentDidMount(){
-        const url = "https://europe-west1-astronaut-manager.cloudfunctions.net/getAstronauts";
+    async componentDidMount() {
+        const url = "/getAstronauts";
         const response = await fetch(url).catch((err) => console.log(err));
         const data = await response.json();
 
 
-        const list = data.map(item => 
-            <AstronautRecord 
-            item={item}
+        const list = data.map(item =>
+            <AstronautRecord
+                item={item}
 
-            firstName = {item.firstName}
-            lastName = {item.lastName}
-            dateOfBirth = {item.dateOfBirth}
-            superpower = {item.superpower}
-            gender = {item.gender}
-            key = {item.id}
+                firstName={item.firstName}
+                lastName={item.lastName}
+                dateOfBirth={item.dateOfBirth}
+                superpower={item.superpower}
+                gender={item.gender}
+                key={item.id}
 
             >
             </AstronautRecord>
         )
         setTimeout(this.enableContent, 2200);
-        this.setState({loading:false, data:list});
+        this.setState({ loading: false, data: list });
     }
 
     componentWillUnmount() {
@@ -47,24 +48,26 @@ class AstronautsList extends Component{
     }
 
     enableContent() {
-        this.setState({timerFinished: true});
+        this.setState({ timerFinished: true });
     }
 
-    render(){
-        return[
-            
-            <div className = "Astronaut-List" >{
+    render() {
+        return [
 
-            !this.state.loading && !this.state.timerFinished ?
+            <div className="Astronaut-List" >{
 
-                <LoadingLayer></LoadingLayer> : 
-                
-                <React.Fragment>
-                {
-                     this.state.data
-                }
-                <button>ADD A NEW RECRUIT</button>
-                </React.Fragment>
+                !this.state.loading && !this.state.timerFinished ?
+
+                    <LoadingLayer></LoadingLayer> :
+
+                    <React.Fragment>
+                        <AddAstronautForm></AddAstronautForm>
+
+                        {
+                            this.state.data
+                        }
+
+                    </React.Fragment>
             }</div>
         ]
     }
