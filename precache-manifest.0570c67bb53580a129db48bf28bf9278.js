@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "0e969c92f26ea80872d2c91693dc59b5",
+    "revision": "7ef08b117907da9741cda298dbaf2f5a",
     "url": "/Astronaut-Manager-Client/index.html"
   },
   {
-    "revision": "3a0fbfda4b485d21a410",
-    "url": "/Astronaut-Manager-Client/static/css/main.fd7e488d.chunk.css"
+    "revision": "9185cc4c3eef53a3d406",
+    "url": "/Astronaut-Manager-Client/static/css/main.1c4cadde.chunk.css"
   },
   {
-    "revision": "293d396fe1ef9e0609e2",
-    "url": "/Astronaut-Manager-Client/static/js/2.93ee6dd5.chunk.js"
+    "revision": "3a813b941abd92fedb0d",
+    "url": "/Astronaut-Manager-Client/static/js/2.91ee3345.chunk.js"
   },
   {
     "revision": "d705cb622423d72c5defbf368ca70dcc",
-    "url": "/Astronaut-Manager-Client/static/js/2.93ee6dd5.chunk.js.LICENSE"
+    "url": "/Astronaut-Manager-Client/static/js/2.91ee3345.chunk.js.LICENSE"
   },
   {
-    "revision": "3a0fbfda4b485d21a410",
-    "url": "/Astronaut-Manager-Client/static/js/main.cf517096.chunk.js"
+    "revision": "9185cc4c3eef53a3d406",
+    "url": "/Astronaut-Manager-Client/static/js/main.2057a6e8.chunk.js"
   },
   {
     "revision": "3c1e30db1f78a47da9dc",

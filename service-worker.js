@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/Astronaut-Manager-Client/precache-manifest.47c52466e675750594cf06ea263d1e48.js"
+  "/Astronaut-Manager-Client/precache-manifest.0570c67bb53580a129db48bf28bf9278.js"
 );
 
 self.addEventListener('message', (event) => {
