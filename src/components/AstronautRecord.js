@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import '../styles/AstronautRecordStyle.scss'
 import AstronautProfileImage from './AstronautProfileImage';
 import AstronautRecordInfo from './AstronautRecordInfo';

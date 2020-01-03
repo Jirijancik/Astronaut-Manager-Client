@@ -26,11 +26,13 @@ class AddAstronautForm extends Component {
     handleSubmit = (e) => {
         e.preventDefault();
 
-        const url = "/createAstronaut";
+        const url = "https://europe-west1-astronaut-manager.cloudfunctions.net/createAstronaut";
         fetch(url, {
 
             method: 'POST',
-            headers: new Headers(),
+            headers: {
+                'Content-Type': 'application/json',
+              },
             body: JSON.stringify({
                 lastName: this.state.lastName,
                 firstName: this.state.firstName,
